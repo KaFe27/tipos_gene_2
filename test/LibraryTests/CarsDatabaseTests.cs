@@ -7,14 +7,14 @@ namespace Ucu.Poo.Repositories.Tests
     [TestFixture]
     public class CarsDatabaseTests
     {
-        private CarsDatabase database;
+        private Database<Car> database;
 
         [SetUp]
         public void SetUp()
         {
-            this.database = new CarsDatabase();
+            this.database = new Database<Car>();
         }
-
+        
         [Test]
         public void AddCar_ValidCar_CarIsFound()
         {
