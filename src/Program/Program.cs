@@ -25,7 +25,7 @@ namespace Ucu.Poo.Repositories
             database.Add(focus);
             database.SaveToFile("cars.json");
             Console.WriteLine("Database saved:");
-            foreach (Car car in restoredDatabase.Items)
+            foreach (Car car in database.Items)
             {
                 Console.WriteLine($"Model: {car.Model}, Maker: {car.Maker}, Year: {car.Year}");
             }
@@ -33,7 +33,7 @@ namespace Ucu.Poo.Repositories
             Database<Car> restoredDatabase = new Database<Car>();
             restoredDatabase.LoadFromFile("cars.json");
             Console.WriteLine("Restored database:");
-            foreach (Car car in database.Cars)
+            foreach (Car car in restoredDatabase.Items)
             {
                 Console.WriteLine($"Model: {car.Model}, Maker: {car.Maker}, Year: {car.Year}");
             }
